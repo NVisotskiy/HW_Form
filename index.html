@@ -11,33 +11,71 @@
 </head>
 <body>
 <form class="form" name="registration" method="post" action="https://foo.com">
+
   <div class="reg-form">
-    <label for="full-name"><b>Повне ім'я</b></label>
-    <input type="text" id="full-name" placeholder="Введіть ПІБ" name="email" required>
+    <div class="fields d-flex">
+      <!--Full name-->
+      <label for="full-name"><b>Повне ім'я</b></label>
+      <input type="text" id="full-name" placeholder="Введіть ПІБ" name="email" required>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" id="email" placeholder="Введіть ваш Email" name="email" required>
+      <!--Email-->
+      <label for="email"><b>Email</b></label>
+      <input type="text" id="email" placeholder="Введіть ваш Email" name="email" required>
 
-    <label for="psw"><b>Пароль</b></label>
-    <input type="password" id="psw" placeholder="Введіть пароль" name="psw" required>
+      <!--Password-->
+      <label for="psw"><b>Пароль</b></label>
+      <input type="password" id="psw" placeholder="Введіть пароль" name="psw" required>
 
-    <label for="psw-repeat"><b>Пароль ще раз</b></label>
-    <input type="password" id="psw-repeat" placeholder="Введіть пароль ще раз" name="psw-repeat"
-           required>
+      <!--password again-->
+      <label for="psw-repeat"><b>Пароль ще раз</b></label>
+      <input type="password" id="psw-repeat" placeholder="Введіть пароль ще раз" name="psw-repeat"
+             required>
 
-    <label for="age"><b>Вік</b></label>
-    <input type="number" id="age" placeholder="Введіть вік">
+      <!--age-->
+      <label for="age"><b>Вік</b></label>
+      <input type="number" id="age" placeholder="Введіть вік">
 
-    <div class="radio">
-      <span>Пол</span>
+      <!--Sex-->
+      <div class="radio d-flex">
+        <span>Пол</span>
+        <label>
+          <input type="radio" name="sex" value="чоловіча">чоловіча
+        </label>
+        <label>
+          <input type="radio" name="sex" value="жіноча">жіноча
+        </label>
+      </div>
+
+
+      <!--Select-->
       <label>
-        <input type="radio" name="sex" value="мужской">мужской
+        <select name="choose-course d-flex">
+          <option value="0"></option>
+          <option value="1">Business management</option>
+          <option value="2">QA Manual</option>
+          <option value="3">Front End</option>
+          <option value="4">Python</option>
+        </select>
       </label>
-      <label>
-        <input type="radio" name="sex" value="женский">женский
-      </label>
+
+
+      <!--Textarea-->
+      <label for="adress" class="textarea-field"><b>Введить повну адресу</b></label>
+      <textarea id="adress" name="message" cols="30" rows="4" placeholder="Повна адреса"></textarea>
+
+      <div class="checkbox">
+        <label for="checkbox" class="checkbox1">
+          <input id="checkbox" class="checkbox" type="checkbox">
+          <span>Я погоджуюсь з обробкою персональних даних</span>
+        </label>
+      </div>
+    </div>
+    <div class="buttons">
+      <button>Очистити форму</button>
+      <button>Зареєструватися</button>
     </div>
   </div>
 </form>
 </body>
 </html>
+
