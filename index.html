@@ -10,72 +10,87 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<form class="form" name="registration" method="post" action="https://foo.com">
+<div class="form-registration">
+  <form class="form" name="registration" method="post" action="https://foo.com">
 
-  <div class="reg-form">
-    <div class="fields d-flex">
-      <!--Full name-->
-      <label for="full-name"><b>Повне ім'я</b></label>
-      <input type="text" id="full-name" placeholder="Введіть ПІБ" name="email" required>
+    <div class="reg-form">
+      <div class="fields">
+        <div class="fields-group">
+          <!--Full name-->
+          <div class="field-group-section fields-group-name">
+            <label for="full-name"><b>Повне ім'я</b></label>
+            <input type="text" id="full-name" placeholder="Введіть ПІБ" name="email" required>
+          </div>
+        </div>
+        <!--Email-->
+        <div class="field-group-section fields-group-email">
+          <label for="email"><b>Email</b></label>
+          <input type="text" id="email" placeholder="Введіть ваш Email" name="email" required>
+        </div>
+        <!--Password-->
+        <div class="field-group-section fields-group-psw">
+          <label for="psw"><b>Пароль</b></label>
+          <input type="password" id="psw" placeholder="Введіть пароль" name="psw" required>
+        </div>
+        <!--password again-->
+        <div class="field-group-section fields-group-psw-rep">
+          <label for="psw-repeat"><b>Пароль ще раз</b></label>
+          <input type="password" id="psw-repeat" placeholder="Введіть пароль ще раз"
+                 name="psw-repeat"
+                 required>
+        </div>
+        <!--age-->
+        <div class="field-group-section fields-group-age">
+          <label for="age"><b>Вік</b></label>
+          <input type="number" id="age" placeholder="Введіть вік">
+        </div>
+        <!--Sex-->
+        <div class="field-group-section fields-group-radioBttn">
+          <div class="radio">
+          </div>
+          <div class="fields-group-sex">
+            <span>Пол</span>
+            <label>
+              <input type="radio" name="sex" value="чоловіча">чоловіча
+            </label>
+            <label>
+              <input type="radio" name="sex" value="жіноча">жіноча
+            </label>
+          </div>
+        </div>
 
-      <!--Email-->
-      <label for="email"><b>Email</b></label>
-      <input type="text" id="email" placeholder="Введіть ваш Email" name="email" required>
+        <!--Select-->
+        <div class="field-group-section fields-group-dropList">
+          <label><b>Оберіть курс</b></label>
+            <select name="choose-course d-flex">
+              <option value="0">-=Оберіть курс=-</option>
+              <option value="1">Business management</option>
+              <option value="2">QA Manual</option>
+              <option value="3">Front End</option>
+              <option value="4">Python</option>
+            </select>
 
-      <!--Password-->
-      <label for="psw"><b>Пароль</b></label>
-      <input type="password" id="psw" placeholder="Введіть пароль" name="psw" required>
-
-      <!--password again-->
-      <label for="psw-repeat"><b>Пароль ще раз</b></label>
-      <input type="password" id="psw-repeat" placeholder="Введіть пароль ще раз" name="psw-repeat"
-             required>
-
-      <!--age-->
-      <label for="age"><b>Вік</b></label>
-      <input type="number" id="age" placeholder="Введіть вік">
-
-      <!--Sex-->
-      <div class="radio d-flex">
-        <span>Пол</span>
-        <label>
-          <input type="radio" name="sex" value="чоловіча">чоловіча
-        </label>
-        <label>
-          <input type="radio" name="sex" value="жіноча">жіноча
-        </label>
+        </div>
+        <!--Textarea-->
+        <div class="field-group-section fields-group-textArea">
+          <label for="adress" class="textarea-field"><b>Введить повну адресу</b></label>
+          <textarea id="adress" name="message" cols="30" rows="4"
+                    placeholder="Повна адреса"></textarea>
+        </div>
+        <div class=" checkbox">
+          <label for="checkbox" class="checkbox1">
+            <input id="checkbox" class="checkbox" type="checkbox">
+            <span>Я погоджуюсь з обробкою персональних даних</span>
+          </label>
+        </div>
       </div>
-
-
-      <!--Select-->
-      <label>
-        <select name="choose-course d-flex">
-          <option value="0"></option>
-          <option value="1">Business management</option>
-          <option value="2">QA Manual</option>
-          <option value="3">Front End</option>
-          <option value="4">Python</option>
-        </select>
-      </label>
-
-
-      <!--Textarea-->
-      <label for="adress" class="textarea-field"><b>Введить повну адресу</b></label>
-      <textarea id="adress" name="message" cols="30" rows="4" placeholder="Повна адреса"></textarea>
-
-      <div class="checkbox">
-        <label for="checkbox" class="checkbox1">
-          <input id="checkbox" class="checkbox" type="checkbox">
-          <span>Я погоджуюсь з обробкою персональних даних</span>
-        </label>
+      <div class="field-group-section buttons">
+        <button>Очистити форму</button>
+        <button>Зареєструватися</button>
       </div>
     </div>
-    <div class="buttons">
-      <button>Очистити форму</button>
-      <button>Зареєструватися</button>
-    </div>
-  </div>
-</form>
+  </form>
+</div>
 </body>
 </html>
 
